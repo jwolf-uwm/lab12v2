@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.views import View
-
 from giftReg.models import User
 
 
@@ -8,6 +7,21 @@ class Home(View):
 
     def get(self, request):
         return render(request, "main/index.html")
+
+    def post(self, request):
+        username = request.POST['userName']
+        password = request.POST['userPassword']
+
+        try:
+            user = User.objects.get(user_username=username)
+        except User.DoesNotExist:
+            return render(request, "main/index.html", {"message": "Username not found."})
+
+        if user.user_password != password:
+            return render(request, "main/index.html", {"message": "Invalid password."})
+        else:
+            User.objects.filter(user_username=username).update(user_authenticated=True)
+            return render(request, "main/index.html", {"message": "Login successful."})
 
 
 class Success(View):
