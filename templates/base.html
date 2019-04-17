@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="{% static "css/style.css" %}">
 </head>
 <body>
+<div class="topnav">
+  <a class="active" href="{% url "Home1" %}">Home</a>
+  <a href="{% url "Registration1" %}">Registration</a>
+  <a href="{% url "Users1" %}">Users</a>
+  <a href="{% url "Gifts1" %}">Gifts</a>
+</div>
     {% block content %}{% endblock content %}
 </body>
 </html>

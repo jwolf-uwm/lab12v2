@@ -10,6 +10,24 @@ class Home(View):
         return render(request, "main/index.html")
 
 
+class Success(View):
+
+    def get(self, request):
+        return render(request, "main/success.html")
+
+
+class Users(View):
+
+    def get(self, request):
+        return render(request, "main/users.html")
+
+
+class Gifts(View):
+
+    def get(self, request):
+        return render(request, "main/gifts.html")
+
+
 class Registration(View):
 
     def get(self, request):
@@ -35,7 +53,7 @@ class Registration(View):
 
         if not does_exist:
             user.save()
-            return render(request, "main/registration.html", {"message": "Success!"})
+            return render(request, "main/success.html")
         else:
             return render(request, "main/registration.html", {"message": "Failure, username or email address already "
                                                                          + "taken"})
