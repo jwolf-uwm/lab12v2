@@ -27,6 +27,9 @@ class Gifts(View):
     def get(self, request):
         return render(request, "main/gifts.html")
 
+    def post(self, request):
+
+
 
 class Registration(View):
 
