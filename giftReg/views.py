@@ -12,6 +12,17 @@ class Home(View):
         username = request.POST['userName']
         password = request.POST['userPassword']
 
+        already_logged_in = False
+
+        try:
+            user = User.objects.get(user_authenticated=True)
+            already_logged_in = True
+        except User.DoesNotExist:
+            already_logged_in = False
+
+        if already_logged_in:
+            return render(request, "main/index.html", {"message": "User already logged in."})
+
         try:
             user = User.objects.get(user_username=username)
         except User.DoesNotExist:
