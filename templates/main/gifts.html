@@ -14,7 +14,13 @@
                 </tr>
             {% endfor %}
         </table>
-        <a href="{% url "Ticket1" %}">Add Ticket</a>
+        <p><br>Add a new Gift</p>
+        <form id="giftform" method="POST">
+            <label for="gift">Gift:</label>
+            <input type="text" id="gift" name="giftName">
+            <br><br>
+            <input type="submit">
+        </form>
     </div>
 </body>
 </html>
