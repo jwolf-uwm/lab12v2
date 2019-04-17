@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Success</title>
-</head>
-<body>
+
+{% extends "base.html" %}
+
+{% block content %}
+
     <h1>Success!</h1>
-    <a href="index.html">Home</a>
-</body>
-</html>
+    <a href="{% url "Home1" %}">Home</a>
+{% endblock content %}
