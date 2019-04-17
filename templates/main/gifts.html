@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Gifts</title>
 </head>
 <body>
-
+    <div class="mainContent">
+        <table>
+            <tr>Gifts</tr>
+            {% for gift in gifts %}
+                <tr>
+                    <td>{{ ticket.location }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <a href="{% url "Ticket1" %}">Add Ticket</a>
+    </div>
 </body>
 </html>
