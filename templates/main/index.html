@@ -3,6 +3,17 @@
 
 {% block content %}
 
-    test
+    <h1>Home</h1>
+    <form id="login" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="userName">
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name ="userPassword">
+        <br><br>
+        <input type="submit">
+        <br><br>
+        Not registered? Click here to make an account.
+    </form>
 
 {% endblock content %}
