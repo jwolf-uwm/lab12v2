@@ -35,8 +35,6 @@ class Registration(View):
             except User.DoesNotExist:
                 does_exist = False
 
-
-
         if not does_exist:
             user.save()
             return render(request, "main/registration.html", {"message": "Success!"})
