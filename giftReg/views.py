@@ -16,6 +16,18 @@ class Success(View):
         return render(request, "main/success.html")
 
 
+class Users(View):
+
+    def get(self, request):
+        return render(request, "main/users.html")
+
+
+class Gifts(View):
+
+    def get(self, request):
+        return render(request, "main/gifts.html")
+
+
 class Registration(View):
 
     def get(self, request):
