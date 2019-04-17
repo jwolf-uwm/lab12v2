@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Registration</h1>
+    <form id="regform" method="POST">
+    {% csrf_token %}
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="userEmail">
+        <br><br>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="userName">
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="text" id="password" name ="userPassword">
+        <br><br>
+        <input type="submit">
+    </form>
+
+{% endblock content %}
