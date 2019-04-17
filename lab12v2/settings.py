@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'giftReg.apps.GiftregConfig',
+    'lab12v2',
 ]
 
 MIDDLEWARE = [
