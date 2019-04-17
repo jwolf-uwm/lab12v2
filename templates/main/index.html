@@ -5,6 +5,7 @@
 
     <h1>Home</h1>
     <form id="login" method="POST">
+    {% csrf_token %}
         <label for="username">Username:</label>
         <input type="text" id="username" name="userName">
         <br><br>
@@ -15,5 +16,6 @@
         <br><br>
         Not registered? Click here to make an account.
     </form>
+    <p>{{ message }}</p>
 
 {% endblock content %}
